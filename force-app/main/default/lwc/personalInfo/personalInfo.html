@@ -1,10 +1,10 @@
 <template>
-    <!-- <lightning-card title="Personal Information" icon-name="custom:custom15"></lightning-card> -->
-    <div class="slds-m-top_medium slds-m-bottom_x-large lgc-bg">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium slds-p-horizontal_small">Enter your full name below</h2>
-        <div class="slds-p-around_medium ">
+    <lightning-card title="Personal Information" icon-name="standard:avatar">
+        <div class="slds-m-around_medium">
             <lightning-input type="text" label="Full Name" placeholder="Elon Gandhi" required></lightning-input>
+            <lightning-input type="email" label="Email Address" placeholder="aestdesic@gmail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></lightning-input>
+            <lightning-input type="date" name="input1" label="Date of Birth" ></lightning-input> 
+            <lightning-input type="tel" label="Phone" pattern="+91[7-9]{1}[0-9]{9}" value="+91" placeholder="+919887654123">Karun kya dial number?</lightning-input>
         </div>
-
-    </div>
+    </lightning-card>
 </template>
