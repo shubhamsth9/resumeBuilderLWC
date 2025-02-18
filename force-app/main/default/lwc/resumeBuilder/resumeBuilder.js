@@ -9,7 +9,7 @@ export default class ResumeBuilder extends LightningElement {
 
     handleUpdatePI(event){
         this.personalInfo = event.detail;
-        // console.log(this.personalInfo); git se masti ke liye ek aur commit
+        // console.log(this.personalInfo); git se masti ke liye e3rd commit
         // console.log("in pi evt");
     }
     handleUpdateWorkEx(event){
