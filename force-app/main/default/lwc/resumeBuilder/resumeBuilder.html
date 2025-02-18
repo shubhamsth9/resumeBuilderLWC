@@ -1,6 +1,8 @@
 <template>
     <!-- <lightning-card title="Personal Information" icon-name="custom:custom15"></lightning-card> -->
-    <c-personal-info>prsnl test</c-personal-info>
-    <c-work-ex></c-work-ex>
+    <c-personal-info onupdatepi={handleUpdatePI}></c-personal-info>
+    <c-work-ex onupdateworkex={handleUpdateWorkEx}></c-work-ex>
+    <!-- <c-work-ex></c-work-ex> -->
     <c-education></c-education>
+    <c-skills></c-skills>
 </template>

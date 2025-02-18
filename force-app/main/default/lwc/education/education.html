@@ -1,11 +1,12 @@
 <template>
-    <lightning-card title="Education" icon-name="standard:employee_organization">
-        <div class="slds-m-around_medium">
+    <lightning-card title="Education" icon-name="standard:education">
+        <div class="slds-m-around_medium slds-box">
             <lightning-input type="text" label="College/School" placeholder="JEC" required></lightning-input>
             <lightning-input type="text" label="Location" placeholder="Jabalpur, India" required></lightning-input>
             <lightning-input type="date" label="Start Date" required></lightning-input>
             <lightning-input type="date" label="End Date"></lightning-input>
             <lightning-input type="text" label="Skills" placeholder="Apex, LWC, Copado"></lightning-input>
         </div>
+        <lightning-button variant="brand" label="Add Education" title="Click to add education details" onclick={handleAddEdu} class="slds-m-left_x-small"></lightning-button>
     </lightning-card>
 </template>

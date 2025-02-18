@@ -1,11 +1,12 @@
 <template>
     <lightning-card title="Work Experience" icon-name="standard:employee_organization">
-        <div class="slds-m-around_medium">
-            <lightning-input type="text" label="Company" placeholder="TCS" required></lightning-input>
-            <lightning-input type="text" label="Location" placeholder="Pune, India" required></lightning-input>
-            <lightning-input type="date" label="Start Date" required></lightning-input>
-            <lightning-input type="date" label="End Date"></lightning-input>
-            <lightning-input type="text" label="Skills" placeholder="Apex, LWC, Copado"></lightning-input>
+        <div class="slds-m-around_medium slds-box">
+            <lightning-input type="text" label="Company" placeholder="TCS" onchange={handleWXChange} data-field="company" required></lightning-input>
+            <lightning-input type="text" label="Location" placeholder="Pune, India" onchange={handleWXChange} data-field="location" required></lightning-input>
+            <lightning-input type="date" label="Start Date" onchange={handleWXChange} data-field="startDate" required></lightning-input>
+            <lightning-input type="date" label="End Date" onchange={handleWXChange} data-field="endDate"></lightning-input>
+            <lightning-input type="text" label="Skills" placeholder="Apex, LWC, Copado" onchange={handleWXChange} data-field="skills"></lightning-input>
         </div>
+        <lightning-button variant="brand" label="Add Experience" title="Click to add work experience" onclick={handleOnSubmit} class="slds-m-left_x-small"></lightning-button>
     </lightning-card>
 </template>
