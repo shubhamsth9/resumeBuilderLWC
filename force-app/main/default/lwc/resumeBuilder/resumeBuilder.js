@@ -1,15 +1,15 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api, wire, track } from 'lwc';
 // import PersonalInfo from 'c/personalInfo/personalInfo';
 
 export default class ResumeBuilder extends LightningElement {
-    personalInfo = {};
-    workExInfo = [];
-    educationInfo = [];
-    skillsList = [];
+    @track personalInfo = {};
+    @track workExInfo = [];
+    @track educationInfo = [];
+    @track skillsList = [];
 
     handleUpdatePI(event){
-        this.personalInfo = event.detail;
-        // console.log(this.personalInfo); git se masti ke liye 4rd commit
+        this.personalInfo = JSON.parse(JSON.stringify(event.detail));
+        // console.log(this.personalInfo);
         // console.log("in pi evt");
     }
     handleUpdateWorkEx(event){

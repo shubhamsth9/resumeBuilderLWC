@@ -1,8 +1,18 @@
 <template>
-    <!-- <lightning-card title="Personal Information" icon-name="custom:custom15"></lightning-card> -->
-    <c-personal-info onupdatepi={handleUpdatePI}></c-personal-info>
-    <c-work-ex onupdateworkex={handleUpdateWorkEx}></c-work-ex>
-    <!-- <c-work-ex></c-work-ex> -->
-    <c-education onupdateeducation={handleUpdateEd}></c-education>
-    <c-skills onupdateskills={handleUpdateSkills}></c-skills>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-2">
+            <c-personal-info onupdatepi={handleUpdatePI}></c-personal-info>
+            <c-work-ex onupdateworkex={handleUpdateWorkEx}></c-work-ex>
+            <c-education onupdateeducation={handleUpdateEd}></c-education>
+            <c-skills onupdateskills={handleUpdateSkills}></c-skills>
+        </div>
+        <div class="slds-col slds-size_1-of-2 slds-box slds-theme_default sticky-component">
+            <c-resume-preview
+                personal-info = {personalInfo}
+                work-ex-info = {workExInfo}
+                education-info = {educationInfo}
+                skills-list = {skillsList}>
+            </c-resume-preview>
+        </div>
+    </div>
 </template>
