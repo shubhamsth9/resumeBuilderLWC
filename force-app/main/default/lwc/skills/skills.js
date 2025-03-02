@@ -12,7 +12,7 @@ export default class Skills extends LightningElement {
             this.dispatchEvent(new CustomEvent('updateskills', {detail: skillsValue}));
         }
         else{
-            console.log("skills inout not foind->");
+            console.log("skills input not found->");
         }
     }
 }

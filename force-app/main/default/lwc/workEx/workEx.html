@@ -5,7 +5,7 @@
             <lightning-input type="text" label="Location" placeholder="Pune, India" onchange={handleWXChange} data-field="location" required></lightning-input>
             <lightning-input type="date" label="Start Date" onchange={handleWXChange} data-field="startDate" required></lightning-input>
             <lightning-input type="date" label="End Date" onchange={handleWXChange} data-field="endDate"></lightning-input>
-            <lightning-textarea type="text" label="Work Description" placeholder="Developed Apex classes and LWC Components..." onchange={handleWXChange} data-field="description"></lightning-textarea>
+            <lightning-textarea type="text" label="Work Description (Use '-' to add new point)" placeholder="Developed Apex classes and LWC Components for..." onchange={handleWXChange} data-field="description"></lightning-textarea>
         </div>
         <lightning-button variant="brand" label="Add Experience" title="Click to add work experience" onclick={handleOnSubmit} class="slds-m-left_x-small"></lightning-button>
     </lightning-card>

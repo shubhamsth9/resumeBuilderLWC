@@ -6,11 +6,19 @@ export default class ResumePreview extends LightningElement {
     @api workExInfo;
     @api educationInfo;
     @api skillsList;
+    @track formattedWorkEx = [];
 
-    // connectedCallback() {
-    //     console.log("in connectedCallback: personalInfo ->", this._personalInfo);
-    //     // console.log("workExInfo ->", this.workExInfo);
-    //     // console.log("educationInfo ->", this.educationInfo);
-    //     // console.log("skillsList ->", this.skillsList);
-    // }
+    connectedCallback() {
+        // Format dates when component initializes
+        this.formattedWorkEx = {
+            ...this.workExInfo,
+            startDate: this.formatDate(this.workExInfo.startDate),
+            endDate: this.formatDate(this.workExInfo.endDate)
+        };
+    }
+    
+    formatDate(dateString){
+        if (!dateString) return '';
+        return dateString.replace(/-/g, '/');
+    }
 }

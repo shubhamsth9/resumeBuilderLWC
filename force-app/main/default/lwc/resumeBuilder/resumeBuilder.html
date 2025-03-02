@@ -1,4 +1,5 @@
 <template>
+    <!-- Resume Details Input Component -->
     <div class="slds-grid slds-wrap">
         <div class="slds-col slds-size_1-of-2">
             <c-personal-info onupdatepi={handleUpdatePI}></c-personal-info>
@@ -6,6 +7,8 @@
             <c-education onupdateeducation={handleUpdateEd}></c-education>
             <c-skills onupdateskills={handleUpdateSkills}></c-skills>
         </div>
+
+        <!-- Resume Preview Component -->
         <div class="slds-col slds-size_1-of-2 slds-box slds-theme_default sticky-component">
             <c-resume-preview
                 personal-info = {personalInfo}

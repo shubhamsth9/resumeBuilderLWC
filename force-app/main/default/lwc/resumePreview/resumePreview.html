@@ -1,29 +1,47 @@
 <template>
     <lightning-card class="sticky-component" title="Resume Preview">
         <div class="slds-p-around_medium">
-            <h2 class="slds-text-heading_medium">{personalInfo.fullName}</h2>
-            <p>Email: {personalInfo.email}</p>
-            <p>Phone: {personalInfo.phone}</p>
+            <div class="dimmed-text">
+                <template if:false={personalInfo.fullName}>
+                    <h2 class="slds-text-heading_medium boldd dimmed-text">Shubham Singh</h2>
+                    <p>Phone: +91 8319389947</p>
+                    <p>Email: shubhamsinghsfdc@gmail.com</p>
+                </template>
+            </div>
+            <template if:true={personalInfo.fullName}>
+                <h2 class="slds-text-heading_medium boldd">{personalInfo.fullName}</h2>
+                <p>Phone: {personalInfo.phone}</p>
+                <p>Email: {personalInfo.email}</p>
+            </template>
 
-            <h3 class="slds-text-heading_small slds-m-top_medium">Work Experience</h3>
+            <h3 class="slds-text-heading_small slds-m-top_medium boldd">Work Experience</h3>
             <template for:each={workExInfo} for:item="workEx">
                 <div key={workEx.company}>
-                    <p>{workEx.company} - {workEx.location}</p>
-                    <p>{workEx.startDate} - {workEx.endDate}</p>
-                    <p>Skills: {workEx.description}</p>
+                    <p>{formattedWorkEx.company} : {formattedWorkEx.location}</p>
+                    <p>{formattedWorkEx.startDate} : {formattedWorkEx.endDate}</p>
+                    <p>{formattedWorkEx.description}</p>
                     <hr>
                 </div>
             </template>
 
-            <h3 class="slds-text-heading_small slds-m-top_medium">Educational Details</h3>
+            <h3 class="slds-text-heading_small slds-m-top_medium boldd">Educational Details</h3>
             <template for:each={educationInfo} for:item="edu">
                 <div key={edu.college}>
-                    <p class="slds-text-heading_small boldd">{edu.college}</p>
+                    <p class="slds-text-heading_small">{edu.college}</p>
                     <p>{edu.startDate} - {edu.endDate}</p>
                     <p>Extra Curriculars: {edu.extraCurr}</p>
                     <hr>
                 </div>
             </template>
+
+            <h3 class="slds-text-heading_small slds-m-top_medium boldd">Skills</h3>
+            <div class="pills-container">
+                <template for:each={skillsList} for:item="skill">
+                    <div key={skill} class="skill-pill">
+                        <span>{skill}</span>
+                    </div>
+                </template>
+            </div>
         </div>
     </lightning-card>
 </template>

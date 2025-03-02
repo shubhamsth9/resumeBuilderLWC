@@ -1,3 +1,23 @@
 .boldd{
     font-weight: bold;
 }
+
+.dimmed-text{
+    color: rgb(112, 112, 112);
+}
+
+.pills-container{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-pill{
+    background-color: #f7f7f7;
+    border-radius: 0.1rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+}
